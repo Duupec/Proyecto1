@@ -35,7 +35,7 @@ body {
 }
 header {/* conectando al 'header' anterior en grid container */
   grid-area: header;
-  background-color: #5085bb; /* este es el color del cuadro*/
+  background-color: #355C7D; /* este es el color del cuadro*/
 }
 main {
   grid-area: main;/* conecntando cuerpo grid cotainer*/
@@ -43,7 +43,7 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #5085bb;
+  background-color: #355C7D;
   color: #ffffff;
 }
 /* Common */
@@ -52,14 +52,14 @@ h1{
     padding: 1rem 0;
 }
 h2{
-    font-size:1.6rem;
+    font-size:2rem;
     padding:0.1rem 0;
 }
 a {
   text-decoration: none;/* quitar lo de azul con los url*/
 }
 a:hover {
-  color: #ff8000; /* de que color sea ucuando pases el click por las url */
+  color: #37d87f; /* de que color sea ucuando pases el click por las url */
 }
 
 /* Header */
@@ -110,4 +110,9 @@ img.medium {
 .rating span {/* para todos los span dentro de rating*/
   color: #f0c040;
   margin: 0.1rem;
+
+}
+.rating span:last-child {
+  color: #404040;
+  margin: 0.5rem;
 }
