@@ -1,0 +1,100 @@
+html {
+    font-size: 62.5%; /* el font que viene por default es 16px, si multiplicas eso por x 62.5, el resultado es = 10px, que equivale a = 1rem */
+    box-sizing: border-box; /* tamanio incluido los bordes*/
+  }
+  body {
+    margin: 0;
+    height: 100vh;/*que tan abajo ira lo de los derechos se reservan? considerar que puede ir mas abajo de la ventana, asi se hace mas grande y puedes hacer scroll*/
+    font-size: 1.6rem; /* tamanio de letra de palabras en cuerpo */
+    font-family: Helvetica, Arial, sans-serif; /* opciones de tipos de texto */
+  }
+  
+  /* Layout,  */
+  .grid-container { /*referencia al grid container del html */
+    display: grid; 
+    grid-template-areas:/* definir donde estaran los cuadros*/
+      'header'
+      'main'
+      'footer';
+    grid-template-columns: 1fr; /* no hay barra de desplazamiento hacia derecha o izq, es solo de un lado*/
+    grid-template-rows: 5rem 1fr 5rem;/* divide el tamanio de la pantalla en 3 secciones, en auto las divide en tres iguales*/
+    height: 100%;
+  }
+  header {/* conectando al 'header' anterior en grid container */
+    grid-area: header;
+    background-color: #5085bb; /* este es el color del cuadro*/
+  }
+  main {
+    grid-area: main;/* conecntando cuerpo grid cotainer*/
+    padding: 1rem;/* margen arriba e izq*/
+  }
+  footer {
+    grid-area: footer;
+    background-color: #5085bb;
+    color: #ffffff;
+  }
+  /* Common */
+  h1{
+      font-size:1.8rem;
+      padding: 1rem 0;
+  }
+  h2{
+      font-size:1.6rem;
+      padding:0.1rem 0;
+  }
+  a {
+    text-decoration: none;/* quitar lo de azul con los url*/
+  }
+  a:hover {
+    color: #ff8000; /* de que color sea ucuando pases el click por las url */
+  }
+
+  /* Header */
+  header a {/* los links dentro de header*/
+    color: #ffffff;
+    padding: 1rem;
+  }
+  a.brand {/* definimos brand para titulo y asi referenciamos a que queremos modificar ese en especifico*/
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .row {/* para mover sign in y carrito a la dercha y que esten misma linea que proyecto*/
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center; /*altura dentro de cuadro donde se ubican*/
+  }
+  .row.center {
+    justify-content: center;/* mover pied e pagina e imagenes*/
+  }
+
+/* Image */
+img {
+    border-radius: 0.5rem;
+  }
+  img.medium {
+    max-width: 29rem;
+    width: 100%;
+  }
+/* Card */
+.card {
+    border: 0.1rem #c0c0c0 solid;
+    background-color: #f8f8f8;
+    border-radius: 0.5rem;
+    margin: 1rem;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .card-body > * {
+    margin-bottom: 0.5rem;
+  }
+  .price {
+    font-size: 2rem;
+  }
+  /* Rating */
+  .rating span {/* para todos los span dentro de rating*/
+    color: #f0c040;
+    margin: 0.1rem;
+  }
