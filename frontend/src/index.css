@@ -59,7 +59,35 @@ a {
   text-decoration: none;/* quitar lo de azul con los url*/
 }
 a:hover {
-  color: #37d87f; /* de que color sea ucuando pases el click por las url */
+  color: #d8ad37; /* de que color sea ucuando pases el click por las url */
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: #f0c040;
+}
+button.block {
+  width: 100%;
 }
 
 /* Header */
@@ -81,6 +109,16 @@ a.brand {/* definimos brand para titulo y asi referenciamos a que queremos modif
 .row.center {
   justify-content: center;/* mover pied e pagina e imagenes*/
 }
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  flex: 1 1 25rem; /*ocupa 1 de 4, el otro 1 le hace shrinkeable y 25 rem aplica el width de esa columna*/
+}
+.col-2 {
+  flex: 2 1 50rem; /*ocupa 2 columnas de 4*/
+}
+
 
 /* Image */
 img {
@@ -90,6 +128,10 @@ img.medium {
   max-width: 29rem;
   width: 100%;
 }
+img.large {
+  width: 100%; /*para que sirva para todas las interfaces, si quito esto no es responsive pero se achica acorde al zoom*/
+}
+
 /* Card */
 .card {
   border: 0.1rem #c0c0c0 solid;
@@ -115,4 +157,12 @@ img.medium {
 .rating span:last-child {
   color: #404040;
   margin: 0.5rem;
+}
+
+/* Alerta para el inventario*/
+.success {
+  color: #20a020;
+}
+.error {
+  color: #a02020;
 }
