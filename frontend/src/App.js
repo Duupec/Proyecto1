@@ -1,8 +1,7 @@
 import React from 'react';
-import {BrowserRouter,Route} from 'react-router-dom'
+import {BrowserRouter,Route} from 'react-router-dom';
 import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
-
 
 function App() {
   return (
